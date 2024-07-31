@@ -2,8 +2,6 @@ import React from 'react';
 import '../Interface/style.css';
 import { MailOutline, LocationOutline, SearchOutline, PersonOutline, CartOutline, MenuOutline, CloseOutline } from 'react-ionicons';
 import { Link } from 'react-router-dom'; 
-// import logo from '../../assets/logo.png';
-
 const Header = () => {
   return (
     <header className="header" data-header>

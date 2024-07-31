@@ -4,7 +4,7 @@ const ContactHeader = () => {
       <div className={styles.contact_section}>
         <h1>CONTACT US</h1>
         <p>
-            LET'S CONNECT: WE'RE HERE TO HELP, AND WE'D LOVE TO HEAR FROM YOU! WHETHER YOU HAVE A QUESTION, COMMENT, OR JUST WANT TO CHAT, YOU CAN REACH OUT TO US THROUGH THE CONTACT FROM OF THIS PAGE, OR BY PHONE, EMAIL, OR SOCIAL MEDIA.
+            LET'S CONNECT:We’re here to assist you and would love to hear from you. Whether you have questions, comments, or just want to chat about your real estate needs, don’t hesitate to reach out.
         </p>
       </div>
   )

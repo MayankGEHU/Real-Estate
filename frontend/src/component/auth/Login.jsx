@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { handleError, handleSuccess } from '../utils/toast';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../auth/login.css';
 import { AuthContext } from '../context/AuthContext';
@@ -26,7 +27,7 @@ const AuthForm = () => {
     e.preventDefault();
     const { name, email, password } = signupInfo;
     if (!name || !email || !password) {
-      return handleError('Name, email, and password are required');
+      return toast.error('Name, email, and password are required');
     }
     try {
       const response = await fetch('http://localhost:8080/auth/signup', {
@@ -37,16 +38,16 @@ const AuthForm = () => {
       const result = await response.json();
 
       if (result.success) {
-        handleSuccess(result.message);
+        toast.success(result.message);
         login(result.token); // Store token and update authentication status
         setTimeout(() => {
           navigate('/interface');  // Redirect after signup
         }, 1000);
       } else {
-        handleError(result.message || 'Signup failed');
+        toast.error(result.message || 'Signup failed');
       }
     } catch (err) {
-      handleError(err.message);
+      toast.error(err.message);
     }
   };
 
@@ -54,7 +55,7 @@ const AuthForm = () => {
     e.preventDefault();
     const { email, password } = signinInfo;
     if (!email || !password) {
-      return handleError('Email and password are required');
+      return toast.error('Email and password are required');
     }
     try {
       const response = await fetch('http://localhost:8080/auth/login', {
@@ -65,16 +66,16 @@ const AuthForm = () => {
       const result = await response.json();
 
       if (result.success) {
-        handleSuccess(result.message);
+        toast.success(result.message);
         login(result.token); 
         setTimeout(() => {
           navigate('/interface');  
         }, 1000);
       } else {
-        handleError(result.message || 'Signin failed');
+        toast.error(result.message || 'Signin failed');
       }
     } catch (err) {
-      handleError(err.message);
+      toast.error(err.message);
     }
   };
 
@@ -209,6 +210,7 @@ const AuthForm = () => {
           <img src="img/register.svg" className="image" alt="" />
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
