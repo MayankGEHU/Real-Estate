@@ -1,13 +1,9 @@
 import React from 'react';
-import '../Interface/style.css'
-import { MailOutline } from 'react-ionicons'
-import { LocationOutline } from 'react-ionicons'
-import { SearchOutline } from 'react-ionicons'
-import { PersonOutline } from 'react-ionicons'
-import { CartOutline } from 'react-ionicons'
-import { MenuOutline } from 'react-ionicons'
-import { CloseOutline } from 'react-ionicons'
-// import logo from '../../assets/logo.png'
+import '../Interface/style.css';
+import { MailOutline, LocationOutline, SearchOutline, PersonOutline, CartOutline, MenuOutline, CloseOutline } from 'react-ionicons';
+import { Link } from 'react-router-dom'; 
+// import logo from '../../assets/logo.png';
+
 const Header = () => {
   return (
     <header className="header" data-header>
@@ -17,17 +13,13 @@ const Header = () => {
           <ul className="header-top-list">
             <li>
               <a href="mailto:minku6195@gmail.com" className="header-top-link">
-              <MailOutline
-               color={'#ff5a3d'} 
-                />
+                <MailOutline color={'#ff5a3d'} />
                 <span>info@mayank.com</span>
               </a>
             </li>
             <li>
               <a href="#" className="header-top-link">
-                <LocationOutline
-                  color={'#ff5a3d'} 
-                />
+                <LocationOutline color={'#ff5a3d'} />
                 <address>Dehradun, Rispna, Uttrakhand</address>
               </a>
             </li>
@@ -73,42 +65,40 @@ const Header = () => {
                 <img src={logo} alt="Homeverse logo" />
               </a> */}
               <button className="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-                <CloseOutline
-                color={'#ff5a3d'} 
-                />
+                <CloseOutline color={'#ff5a3d'} />
               </button>
             </div>
             <div className="navbar-bottom">
               <ul className="navbar-list">
                 <li>
-                  <a href="#home" className="navbar-link" data-nav-link>
-                    Home
-                  </a>
+                <Link to="/interface" className="navbar-link" data-nav-link>
+                  Home
+                  </Link>
                 </li>
                 <li>
-                  <a href="#about" className="navbar-link" data-nav-link>
-                    About
-                  </a>
+                  <Link to="/interface" className="navbar-link" data-nav-link>
+                  About
+                  </Link>
                 </li>
                 <li>
-                  <a href="#service" className="navbar-link" data-nav-link>
-                    Service
-                  </a>
+                  <Link to="/interface" className="navbar-link" data-nav-link>
+                  Service
+                  </Link>
                 </li>
                 <li>
-                  <a href="#property" className="navbar-link" data-nav-link>
-                    Property
-                  </a>
+                  <Link to="/interface" className="navbar-link" data-nav-link>
+                  Property
+                  </Link>
                 </li>
                 <li>
-                  <a href="#blog" className="navbar-link" data-nav-link>
-                    Blog
-                  </a>
+                  <Link to="/interface" className="navbar-link" data-nav-link>
+                  Blog
+                  </Link>
                 </li>
                 <li>
-                  <a href="#ContactUs" className="navbar-link" data-nav-link>
+                  <Link to="/contact-us" className="navbar-link" data-nav-link>
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -116,27 +106,19 @@ const Header = () => {
 
           <div className="header-bottom-actions">
             <button className="header-bottom-actions-btn" aria-label="Search">
-              <SearchOutline
-                color={'#ff5a3d'} 
-              />
+              <SearchOutline color={'#ff5a3d'} />
               <span>Search</span>
             </button>
             <button className="header-bottom-actions-btn" aria-label="Profile">
-              <PersonOutline
-               color={'#ff5a3d'} 
-               />
+              <PersonOutline color={'#ff5a3d'} />
               <span>Profile</span>
             </button>
             <button className="header-bottom-actions-btn" aria-label="Cart">
-              <CartOutline
-                color={'#ff5a3d'} 
-              />
+              <CartOutline color={'#ff5a3d'} />
               <span>Cart</span>
             </button>
             <button className="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
-              <MenuOutline
-              color={'#ff5a3d'} 
-              />
+              <MenuOutline color={'#ff5a3d'} />
               <span>Menu</span>
             </button>
           </div>

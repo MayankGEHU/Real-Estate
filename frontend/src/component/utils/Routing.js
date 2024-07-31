@@ -13,6 +13,10 @@ import Footer from '../Interface/Footer';
 import BuyAhome from '../Services/BuyAhome';
 import RentAhome from '../Services/RentAhome';
 import SellAhome from '../Services/SellAhome';
+import Button from "../contectUs/Button";
+import ContactForm from "../contectUs/ContactForm";
+import ContactHeader from '../contectUs/ContactHeader'
+
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -47,6 +51,13 @@ function Routing() {
         <Route path="/buy-a-home" element={<BuyAhome />} />
         <Route path="/rent-a-home" element={<RentAhome />} />
         <Route path="/sell-a-home" element={<SellAhome />} />
+        <Route path="/contact-us" element={
+  <>
+    <ContactHeader/>
+    <ContactForm/>
+    <Button/>
+  </>
+} />
       </Routes>
     </Layout>
   );
