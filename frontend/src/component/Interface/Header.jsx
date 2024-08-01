@@ -2,6 +2,7 @@ import React from 'react';
 import '../Interface/style.css';
 import { MailOutline, LocationOutline, SearchOutline, PersonOutline, CartOutline, MenuOutline, CloseOutline } from 'react-ionicons';
 import { Link } from 'react-router-dom'; 
+// import logo from '../../assets/logo.png'
 const Header = () => {
   return (
     <header className="header" data-header>
@@ -28,21 +29,19 @@ const Header = () => {
               <li>
                 <a href="#" className="header-top-social-link">
                   {/* <IonIcon name="logo-facebook" /> */}
+                  <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li>
                 <a href="#" className="header-top-social-link">
                   {/* <IonIcon name="logo-twitter" /> */}
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li>
                 <a href="#" className="header-top-social-link">
                   {/* <IonIcon name="logo-instagram" /> */}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="header-top-social-link">
-                  {/* <IonIcon name="logo-pinterest" /> */}
+                  <i className="fab fa-instagram"></i>
                 </a>
               </li>
             </ul>
@@ -56,7 +55,6 @@ const Header = () => {
           {/* <a href="#" className="logo">
             <img src={logo} alt="Homeverse logo" />
           </a> */}
-
           <nav className="navbar" data-navbar>
             <div className="navbar-top">
               {/* <a href="#" className="logo">
@@ -111,8 +109,8 @@ const Header = () => {
               <PersonOutline color={'#ff5a3d'} />
               <span>Profile</span>
             </button>
-            <button className="header-bottom-actions-btn" aria-label="Cart">
-              <CartOutline color={'#ff5a3d'} />
+          <button className="header-bottom-actions-btn" aria-label="Cart">
+             <Link to={'/Cart'}> <CartOutline color={'#ff5a3d'} /></Link>
               <span>Cart</span>
             </button>
             <button className="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">

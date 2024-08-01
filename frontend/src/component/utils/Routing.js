@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import AuthForm from "../auth/Login";
 import Header from '../Interface/Header';
@@ -15,8 +15,11 @@ import RentAhome from '../Services/RentAhome';
 import SellAhome from '../Services/SellAhome';
 import Button from "../contectUs/Button";
 import ContactForm from "../contectUs/ContactForm";
-import ContactHeader from '../contectUs/ContactHeader'
-
+import ContactHeader from '../contectUs/ContactHeader';
+import Button1 from "../enquiryForm/Button-enquiry";
+import EnquiryForm from "../enquiryForm/enquiryForm";
+import EnquiryHeader from "../enquiryForm/enquiryHeader";
+import Cart from "../cart/Cart";
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -31,6 +34,16 @@ const Layout = ({ children }) => {
 };
 
 function Routing() {
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (property) => {
+    setCart((prevCart) => [...prevCart, property]);
+  };
+
+  const handleRemoveFromCart = (index) => {
+    setCart((prevCart) => prevCart.filter((_, i) => i !== index));
+  };
+
   return (
     <Layout>
       <Routes>
@@ -42,7 +55,8 @@ function Routing() {
             <HeroSection />
             <AboutSection />
             <ServiceSection />
-            <PropertySection />
+            {/* Pass handleAddToCart as a prop to PropertySection */}
+            <PropertySection onAddToCart={handleAddToCart} />
             <FeaturesSection />
             <BlogSection />
             <CtaSection />
@@ -52,14 +66,23 @@ function Routing() {
         <Route path="/rent-a-home" element={<RentAhome />} />
         <Route path="/sell-a-home" element={<SellAhome />} />
         <Route path="/contact-us" element={
-  <>
-    <ContactHeader/>
-    <ContactForm/>
-    <Button/>
-  </>
-} />
+          <>
+            <ContactHeader />
+            <ContactForm />
+            <Button />
+          </>
+        } />
+        <Route path="/enquiry" element={
+          <>
+            <EnquiryHeader />
+            <EnquiryForm />
+            <Button1 />
+          </>
+        } />
+        <Route path="/Cart" element={<Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} />} />
       </Routes>
     </Layout>
   );
 }
+
 export default Routing;

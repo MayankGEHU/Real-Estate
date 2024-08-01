@@ -1277,13 +1277,13 @@
   
     .header-bottom-actions-btn ion-icon { margin-bottom: 0; }
   
-    .header-bottom-actions-btn span { display: none; }
+    /* .header-bottom-actions-btn span {display: inline; } */
   
     .header-bottom-actions-btn {
       background: var(--white);
       width: 50px;
       height: 50px;
-      box-shadow: var(--shadow-2);
+      /* box-shadow: var(--shadow-2); */
     }
   
   

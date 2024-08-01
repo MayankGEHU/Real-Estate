@@ -39,9 +39,9 @@ const AuthForm = () => {
 
       if (result.success) {
         toast.success(result.message);
-        login(result.token); // Store token and update authentication status
+        login(result.token); 
         setTimeout(() => {
-          navigate('/interface');  // Redirect after signup
+          navigate('/interface');  
         }, 1000);
       } else {
         toast.error(result.message || 'Signup failed');

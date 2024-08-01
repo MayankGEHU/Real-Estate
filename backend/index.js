@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const AuthRouter = require('./Routes/AuthRouter');
+// const cart = require('./Routes/cart')
 require('dotenv').config();
 require('./Models/db');
 
@@ -14,6 +15,7 @@ app.use(cors());
 
 // Routes
 app.use('/auth', AuthRouter);
+// app.use('/cart', cart)
 
 app.get('/ping', (req, res) => {
     res.send('PONG');

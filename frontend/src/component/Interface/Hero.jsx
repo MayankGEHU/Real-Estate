@@ -2,6 +2,7 @@ import React from 'react';
 import { Tilt } from 'react-tilt'; 
 import '../Interface/style.css';
 import hero from '../../assets/hero-banner.png';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -17,8 +18,9 @@ const HeroSection = () => {
           <p className="hero-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
           </p>
-
-          <button className="btn">Make An Enquiry</button>
+          <Link to="/enquiry">
+              <button className="btn">Make An Enquiry</button>
+          </Link>
         </div>
 
         <Tilt
