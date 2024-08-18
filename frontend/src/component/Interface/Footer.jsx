@@ -1,4 +1,12 @@
 import React from 'react';
+import { LocationOutline } from 'react-ionicons'
+import { CallOutline } from 'react-ionicons'
+import { MailOutline } from 'react-ionicons'
+import { IoLogoYoutube } from "react-icons/io5";
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -14,19 +22,25 @@ const Footer = () => {
             <ul className="contact-list">
               <li>
                 <a href="#" className="contact-link">
-                  {/* <IonIcon name="location-outline" /> */}
+                  <LocationOutline
+                    color={'#ffffff'} 
+                  />
                   <address>Dehradun, Rispna, Uttrakhand</address>
                 </a>
               </li>
               <li>
                 <a href="tel:+0123456789" className="contact-link">
-                  {/* <IonIcon name="call-outline" /> */}
+                  <CallOutline
+                  color={'#fdfcfc'} 
+                  />
                   <span>+0123-456789</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:contact@homeverse.com" className="contact-link">
-                  {/* <IonIcon name="mail-outline" /> */}
+                  <MailOutline
+                  color={'#fdfcfc'} 
+                  />
                   <span>contact@MayankSingh.com</span>
                 </a>
               </li>
@@ -34,22 +48,22 @@ const Footer = () => {
             <ul className="social-list">
               <li>
                 <a href="#" className="social-link">
-                  {/* <IonIcon name="logo-facebook" /> */}
+                  <FaFacebook />
                 </a>
               </li>
               <li>
                 <a href="#" className="social-link">
-                  {/* <IonIcon name="logo-twitter" /> */}
+                  <FaSquareTwitter />
                 </a>
               </li>
               <li>
                 <a href="#" className="social-link">
-                  {/* <IonIcon name="logo-linkedin" /> */}
+                  <FaLinkedin />
                 </a>
               </li>
               <li>
                 <a href="#" className="social-link">
-                  {/* <IonIcon name="logo-youtube" /> */}
+                  <IoLogoYoutube />
                 </a>
               </li>
             </ul>

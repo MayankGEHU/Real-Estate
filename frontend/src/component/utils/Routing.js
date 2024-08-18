@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import AuthForm from "../auth/Login";
-import Header from '../Interface/Header';
+import Layout from './Layout';  // Import the Layout component
 import HeroSection from '../Interface/Hero';
 import AboutSection from '../Interface/About';
 import ServiceSection from '../Interface/Service';
@@ -9,29 +9,16 @@ import PropertySection from '../Interface/Property';
 import FeaturesSection from '../Interface/Feature';
 import BlogSection from '../Interface/Blog';
 import CtaSection from '../Interface/Cta';
-import Footer from '../Interface/Footer';
 import BuyAhome from '../Services/BuyAhome';
 import RentAhome from '../Services/RentAhome';
 import SellAhome from '../Services/SellAhome';
-import Button from "../contectUs/Button";
 import ContactForm from "../contectUs/ContactForm";
 import ContactHeader from '../contectUs/ContactHeader';
+import Button from "../contectUs/Button";
 import Button1 from "../enquiryForm/Button-enquiry";
 import EnquiryForm from "../enquiryForm/enquiryForm";
 import EnquiryHeader from "../enquiryForm/enquiryHeader";
 import Cart from "../cart/Cart";
-
-const Layout = ({ children }) => {
-  const location = useLocation();
-  const showHeaderAndFooter = location.pathname !== '/auth';
-  return (
-    <>
-      {showHeaderAndFooter && <Header />}
-      {children}
-      {showHeaderAndFooter && <Footer />}
-    </>
-  );
-};
 
 function Routing() {
   const [cart, setCart] = useState([]);
@@ -47,15 +34,14 @@ function Routing() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Navigate to="/auth" />} />
-        <Route path="/auth" element={<AuthForm />} />
+        <Route path="/" element={<Navigate to="/interface" />} /> {/* Default route is /interface */}
+        <Route path="/auth" element={<AuthForm />} /> {/* Auth page without header and footer */}
         <Route path="/homepage" element={<Navigate to="/interface" />} />
         <Route path="/interface" element={
           <>
             <HeroSection />
             <AboutSection />
             <ServiceSection />
-            {/* Pass handleAddToCart as a prop to PropertySection */}
             <PropertySection onAddToCart={handleAddToCart} />
             <FeaturesSection />
             <BlogSection />
