@@ -1,9 +1,6 @@
-// routes/cart.js
 const express = require('express');
 const router = express.Router();
-const CartItem = require('../models/CartItem');
-
-// Add item to cart
+const CartItem = require('../Models/CartItem');
 router.post('/add', async (req, res) => {
   try {
     const newItem = new CartItem(req.body);
@@ -14,7 +11,6 @@ router.post('/add', async (req, res) => {
   }
 });
 
-// Get all items in the cart
 router.get('/', async (req, res) => {
   try {
     const items = await CartItem.find();
