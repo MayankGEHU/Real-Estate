@@ -13,6 +13,8 @@ const EnquiryForm = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
+    phone: '',
+    location: '',
     text: ''
   });
 
@@ -33,6 +35,8 @@ const EnquiryForm = () => {
         setForm({
           name: '',
           email: '',
+          phone: '',
+          location: '',
           text: ''
         });
         toast.success('Message sent successfully!');
@@ -81,7 +85,7 @@ const EnquiryForm = () => {
             <input
               type="text"
               name='phone'
-              placeholder='Enter your Number '
+              placeholder='Enter your Number'
               value={form.phone}
               onChange={handleChange}
             />
@@ -92,8 +96,8 @@ const EnquiryForm = () => {
             <input
               type="text"
               name='location'
-              placeholder='Enter the location where you want to search for home'
-              value={form.name}
+              placeholder='Enter the location where you want to search for a home'
+              value={form.location}
               onChange={handleChange}
             />
           </div>
@@ -102,7 +106,7 @@ const EnquiryForm = () => {
             <label htmlFor="text">Description</label>
             <textarea
               name='text'
-              placeholder='Enter the Description of property you want..'
+              placeholder='Enter the description of the property you want...'
               value={form.text}
               onChange={handleChange}
             />
@@ -113,7 +117,7 @@ const EnquiryForm = () => {
         </form>
       </div>
       <div className={styles.contact_image}>
-        <img src={image1} alt="" />
+        <img src={image1} alt="Contact" />
       </div>
       <ToastContainer />
     </section>

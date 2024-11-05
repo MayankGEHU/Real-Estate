@@ -87,7 +87,7 @@ const PropertySection = ({ onAddToCart }) => {
 
   const handleAddToCart = (property) => {
     onAddToCart(property);
-    navigate('/Cart');  // Redirect to the Cart page
+    navigate('/Cart');  
   };
 
   return (
