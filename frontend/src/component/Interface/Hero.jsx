@@ -1,8 +1,8 @@
-import React from 'react';
-import { Tilt } from 'react-tilt'; 
-import '../Interface/style.css';
-import hero from '../../assets/hero-banner.png';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Tilt } from "react-tilt";
+import "../Interface/style.css";
+import hero from "../../assets/hero-banner.png";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -16,10 +16,11 @@ const HeroSection = () => {
           <h2 className="h1 hero-title">Find Your Dream House With Me</h2>
 
           <p className="hero-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore.
           </p>
           <Link to="/enquiry">
-              <button className="btn">Make An Enquiry</button>
+            <button className="btn">Make An Enquiry</button>
           </Link>
         </div>
 
@@ -30,7 +31,7 @@ const HeroSection = () => {
             scale: 1.1,
             speed: 400,
             glare: true,
-            "max-glare": 0.5
+            "max-glare": 0.5,
           }}
         >
           <figure className="hero-banner">

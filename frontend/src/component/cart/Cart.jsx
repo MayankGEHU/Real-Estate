@@ -1,6 +1,6 @@
-import React from 'react';
-import { RemoveCircleOutline } from 'react-ionicons';
-import { SquareOutline } from 'react-ionicons'
+import React from "react";
+import { RemoveCircleOutline } from "react-ionicons";
+import { SquareOutline } from "react-ionicons";
 
 const Cart = ({ cart, onRemoveFromCart }) => {
   return (
@@ -17,9 +17,15 @@ const Cart = ({ cart, onRemoveFromCart }) => {
                 <div className="cart-card">
                   <figure className="card-banner">
                     <a href="#">
-                      <img src={item.imgSrc} alt={item.title} className="w-100" />
+                      <img
+                        src={item.imgSrc}
+                        alt={item.title}
+                        className="w-100"
+                      />
                     </a>
-                    <div className={`card-badge ${item.badgeClass}`}>{item.badge}</div>
+                    <div className={`card-badge ${item.badgeClass}`}>
+                      {item.badge}
+                    </div>
                     <div className="banner-actions">
                       <button className="banner-actions-btn">
                         <address>{item.location}</address>
@@ -34,7 +40,8 @@ const Cart = ({ cart, onRemoveFromCart }) => {
                   </figure>
                   <div className="card-content">
                     <div className="card-price">
-                      <strong>{item.price}</strong>{item.pricePeriod}
+                      <strong>{item.price}</strong>
+                      {item.pricePeriod}
                     </div>
                     <h3 className="h3 card-title">
                       <a href="#">{item.title}</a>
@@ -51,9 +58,7 @@ const Cart = ({ cart, onRemoveFromCart }) => {
                       </li>
                       <li className="card-item">
                         <strong>{item.squareFt}</strong>
-                        <SquareOutline
-                      color={'#5d737e'} 
-                      />
+                        <SquareOutline color={"#5d737e"} />
                         <span>Square Ft</span>
                       </li>
                     </ul>
@@ -61,7 +66,11 @@ const Cart = ({ cart, onRemoveFromCart }) => {
                   <div className="card-footer">
                     <div className="card-author">
                       <figure className="author-avatar">
-                        <img src={item.authorImg} alt={item.authorName} className="w-100" />
+                        <img
+                          src={item.authorImg}
+                          alt={item.authorName}
+                          className="w-100"
+                        />
                       </figure>
                       <div>
                         <p className="author-name">
@@ -71,8 +80,11 @@ const Cart = ({ cart, onRemoveFromCart }) => {
                       </div>
                     </div>
                     <div className="card-footer-actions">
-                      <button className="card-footer-actions-btn" onClick={() => onRemoveFromCart(index)}>
-                        <RemoveCircleOutline color={'#5d737e'} />
+                      <button
+                        className="card-footer-actions-btn"
+                        onClick={() => onRemoveFromCart(index)}
+                      >
+                        <RemoveCircleOutline color={"#5d737e"} />
                       </button>
                     </div>
                   </div>

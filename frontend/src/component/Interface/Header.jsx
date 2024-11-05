@@ -1,14 +1,21 @@
-import React from 'react';
-import '../Interface/style.css';
-import { MailOutline, LocationOutline, SearchOutline, CartOutline, MenuOutline, CloseOutline } from 'react-ionicons';
-import { Link, useNavigate } from 'react-router-dom'; 
-import { LogInOutline } from 'react-ionicons';
+import React from "react";
+import "../Interface/style.css";
+import {
+  MailOutline,
+  LocationOutline,
+  SearchOutline,
+  CartOutline,
+  MenuOutline,
+  CloseOutline,
+} from "react-ionicons";
+import { Link, useNavigate } from "react-router-dom";
+import { LogInOutline } from "react-ionicons";
 
 const Header = () => {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   const handleLoginSignupClick = () => {
-    navigate('/auth'); // Navigate to the auth page
+    navigate("/auth");
   };
 
   return (
@@ -19,13 +26,13 @@ const Header = () => {
           <ul className="header-top-list">
             <li>
               <a href="mailto:minku6195@gmail.com" className="header-top-link">
-                <MailOutline color={'#ff5a3d'} />
+                <MailOutline color={"#ff5a3d"} />
                 <span>info@mayank.com</span>
               </a>
             </li>
             <li>
               <a href="#" className="header-top-link">
-                <LocationOutline color={'#ff5a3d'} />
+                <LocationOutline color={"#ff5a3d"} />
                 <address>Rispna, Dehradun, Uttrakhand</address>
               </a>
             </li>
@@ -64,8 +71,12 @@ const Header = () => {
               {/* <a href="#" className="logo">
                 <img src={logo} alt="Homeverse logo" />
               </a> */}
-              <button className="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
-                <CloseOutline color={'#ff5a3d'} />
+              <button
+                className="nav-close-btn"
+                data-nav-close-btn
+                aria-label="Close Menu"
+              >
+                <CloseOutline color={"#ff5a3d"} />
               </button>
             </div>
             <div className="navbar-bottom">
@@ -106,25 +117,29 @@ const Header = () => {
 
           <div className="header-bottom-actions">
             <button className="header-bottom-actions-btn" aria-label="Search">
-              <SearchOutline color={'#ff5a3d'} />
+              <SearchOutline color={"#ff5a3d"} />
               <span>Search</span>
             </button>
-            <button 
-              className="header-bottom-actions-btn" 
-              aria-label="Profile" 
+            <button
+              className="header-bottom-actions-btn"
+              aria-label="Profile"
               onClick={handleLoginSignupClick} // Add onClick handler
             >
-              <LogInOutline color={'#ff5a3d'} />
+              <LogInOutline color={"#ff5a3d"} />
               <span>Login / Signup</span>
             </button>
             <button className="header-bottom-actions-btn" aria-label="Cart">
-              <Link to={'/Cart'}> 
-                <CartOutline color={'#ff5a3d'} />
+              <Link to={"/Cart"}>
+                <CartOutline color={"#ff5a3d"} />
               </Link>
               <span>Cart</span>
             </button>
-            <button className="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
-              <MenuOutline color={'#ff5a3d'} />
+            <button
+              className="header-bottom-actions-btn"
+              data-nav-open-btn
+              aria-label="Open Menu"
+            >
+              <MenuOutline color={"#ff5a3d"} />
               <span>Menu</span>
             </button>
           </div>

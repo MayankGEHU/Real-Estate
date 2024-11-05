@@ -1,11 +1,22 @@
-import React from 'react';
-import prop1 from '../../assets/property-1.jpg';
-import prop2 from '../../assets/property-2.jpg';
-import prop3 from '../../assets/property-3.jpg';
-import prop4 from '../../assets/property-4.png';
-import authImag from '../../assets/author.jpg';
-import { LocationOutline, CameraOutline, FilmOutline, BedOutline, ManOutline, SquareOutline, ResizeOutline, HeartOutline, AddCircleOutline, CartOutline } from 'react-ionicons';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import prop1 from "../../assets/property-1.jpg";
+import prop2 from "../../assets/property-2.jpg";
+import prop3 from "../../assets/property-3.jpg";
+import prop4 from "../../assets/property-4.png";
+import authImag from "../../assets/author.jpg";
+import {
+  LocationOutline,
+  CameraOutline,
+  FilmOutline,
+  BedOutline,
+  ManOutline,
+  SquareOutline,
+  ResizeOutline,
+  HeartOutline,
+  AddCircleOutline,
+  CartOutline,
+} from "react-ionicons";
+import { useNavigate } from "react-router-dom";
 
 const PropertySection = ({ onAddToCart }) => {
   const navigate = useNavigate();
@@ -21,13 +32,14 @@ const PropertySection = ({ onAddToCart }) => {
       price: "$34,900",
       pricePeriod: "/Month",
       title: "New Apartment Nice View",
-      description: "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
+      description:
+        "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
       bedrooms: 3,
       bathrooms: 2,
       squareFt: 3450,
       authorImg: authImag,
       authorName: "Mayank Singh",
-      authorTitle: "Estate Agents"
+      authorTitle: "Estate Agents",
     },
     {
       imgSrc: prop2,
@@ -39,13 +51,14 @@ const PropertySection = ({ onAddToCart }) => {
       price: "$34,900",
       pricePeriod: "/Month",
       title: "Modern Apartments",
-      description: "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
+      description:
+        "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
       bedrooms: 3,
       bathrooms: 2,
       squareFt: 3450,
       authorImg: authImag,
       authorName: "Mayank Singh",
-      authorTitle: "Estate Agents"
+      authorTitle: "Estate Agents",
     },
     {
       imgSrc: prop3,
@@ -57,13 +70,14 @@ const PropertySection = ({ onAddToCart }) => {
       price: "$34,900",
       pricePeriod: "/Month",
       title: "Comfortable Apartment",
-      description: "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
+      description:
+        "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
       bedrooms: 3,
       bathrooms: 2,
       squareFt: 3450,
       authorImg: authImag,
       authorName: "Mayank Singh",
-      authorTitle: "Estate Agents"
+      authorTitle: "Estate Agents",
     },
     {
       imgSrc: prop4,
@@ -75,19 +89,20 @@ const PropertySection = ({ onAddToCart }) => {
       price: "$34,900",
       pricePeriod: "/Month",
       title: "Luxury villa in Rego Park",
-      description: "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
+      description:
+        "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
       bedrooms: 3,
       bathrooms: 2,
       squareFt: 3450,
       authorImg: authImag,
       authorName: "Mayank Singh",
-      authorTitle: "Estate Agents"
-    }
+      authorTitle: "Estate Agents",
+    },
   ];
 
   const handleAddToCart = (property) => {
     onAddToCart(property);
-    navigate('/Cart');  
+    navigate("/Cart");
   };
 
   return (
@@ -101,27 +116,34 @@ const PropertySection = ({ onAddToCart }) => {
               <div className="property-card">
                 <figure className="card-banner">
                   <a href="#">
-                    <img src={property.imgSrc} alt={property.title} className="w-100" />
+                    <img
+                      src={property.imgSrc}
+                      alt={property.title}
+                      className="w-100"
+                    />
                   </a>
-                  <div className={`card-badge ${property.badgeClass}`}>{property.badge}</div>
+                  <div className={`card-badge ${property.badgeClass}`}>
+                    {property.badge}
+                  </div>
                   <div className="banner-actions">
                     <button className="banner-actions-btn">
-                      <LocationOutline color={'#ffffff'} />
+                      <LocationOutline color={"#ffffff"} />
                       <address>{property.location}</address>
                     </button>
                     <button className="banner-actions-btn">
-                      <CameraOutline color={'#ffffff'} />
+                      <CameraOutline color={"#ffffff"} />
                       <span>{property.cameraCount}</span>
                     </button>
                     <button className="banner-actions-btn">
-                      <FilmOutline color={'#ffffff'} />
+                      <FilmOutline color={"#ffffff"} />
                       <span>{property.videoCount}</span>
                     </button>
                   </div>
                 </figure>
                 <div className="card-content">
                   <div className="card-price">
-                    <strong>{property.price}</strong>{property.pricePeriod}
+                    <strong>{property.price}</strong>
+                    {property.pricePeriod}
                   </div>
                   <h3 className="h3 card-title">
                     <a href="#">{property.title}</a>
@@ -130,17 +152,17 @@ const PropertySection = ({ onAddToCart }) => {
                   <ul className="card-list">
                     <li className="card-item">
                       <strong>{property.bedrooms}</strong>
-                      <BedOutline color={'#5d737e'} />
+                      <BedOutline color={"#5d737e"} />
                       <span>Bedrooms</span>
                     </li>
                     <li className="card-item">
                       <strong>{property.bathrooms}</strong>
-                      <ManOutline color={'#5d737e'} />
+                      <ManOutline color={"#5d737e"} />
                       <span>Bathrooms</span>
                     </li>
                     <li className="card-item">
                       <strong>{property.squareFt}</strong>
-                      <SquareOutline color={'#5d737e'} />
+                      <SquareOutline color={"#5d737e"} />
                       <span>Square Ft</span>
                     </li>
                   </ul>
@@ -148,7 +170,11 @@ const PropertySection = ({ onAddToCart }) => {
                 <div className="card-footer">
                   <div className="card-author">
                     <figure className="author-avatar">
-                      <img src={property.authorImg} alt={property.authorName} className="w-100" />
+                      <img
+                        src={property.authorImg}
+                        alt={property.authorName}
+                        className="w-100"
+                      />
                     </figure>
                     <div>
                       <p className="author-name">
@@ -159,13 +185,16 @@ const PropertySection = ({ onAddToCart }) => {
                   </div>
                   <div className="card-footer-actions">
                     <button className="card-footer-actions-btn">
-                      <ResizeOutline color={'#5d737e'} />
+                      <ResizeOutline color={"#5d737e"} />
                     </button>
                     <button className="card-footer-actions-btn">
-                      <HeartOutline color={'#5d737e'} />
+                      <HeartOutline color={"#5d737e"} />
                     </button>
-                    <button className="card-footer-actions-btn" onClick={() => handleAddToCart(property)}>
-                      <AddCircleOutline color={'#5d737e'} />
+                    <button
+                      className="card-footer-actions-btn"
+                      onClick={() => handleAddToCart(property)}
+                    >
+                      <AddCircleOutline color={"#5d737e"} />
                     </button>
                   </div>
                 </div>
