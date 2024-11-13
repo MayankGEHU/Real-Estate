@@ -4,6 +4,7 @@ import prop2 from "../../assets/property-2.jpg";
 import prop3 from "../../assets/property-3.jpg";
 import prop4 from "../../assets/property-4.png";
 import authImag from "../../assets/author.jpg";
+import { Link } from "react-router-dom";
 import {
   LocationOutline,
   CameraOutline,
@@ -14,7 +15,6 @@ import {
   ResizeOutline,
   HeartOutline,
   AddCircleOutline,
-  CartOutline,
 } from "react-ionicons";
 import { useNavigate } from "react-router-dom";
 
@@ -115,13 +115,13 @@ const PropertySection = ({ onAddToCart }) => {
             <li key={index}>
               <div className="property-card">
                 <figure className="card-banner">
-                  <a href="#">
+                  <Link to={`/property/${property.id}`}> 
                     <img
                       src={property.imgSrc}
                       alt={property.title}
                       className="w-100"
                     />
-                  </a>
+                  </Link>
                   <div className={`card-badge ${property.badgeClass}`}>
                     {property.badge}
                   </div>
@@ -146,7 +146,7 @@ const PropertySection = ({ onAddToCart }) => {
                     {property.pricePeriod}
                   </div>
                   <h3 className="h3 card-title">
-                    <a href="#">{property.title}</a>
+                    <Link to={`/property/${property.id}`}>{property.title}</Link> 
                   </h3>
                   <p className="card-text">{property.description}</p>
                   <ul className="card-list">

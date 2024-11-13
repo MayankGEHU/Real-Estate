@@ -1,0 +1,48 @@
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gallery-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; 
+    margin-bottom: 20px;
+  }
+  
+  .main-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+  }
+  
+  .description {
+    max-width: 400px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-left: 20px; 
+  }
+  
+  .thumbnail-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+  }
+  
+  .thumbnail.active {
+    border-color: #007bff;
+  }
+  

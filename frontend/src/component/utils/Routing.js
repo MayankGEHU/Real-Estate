@@ -19,6 +19,7 @@ import Button1 from "../enquiryForm/Button-enquiry";
 import EnquiryForm from "../enquiryForm/enquiryForm";
 import EnquiryHeader from "../enquiryForm/enquiryHeader";
 import Cart from "../cart/Cart";
+import PropertySubPart from "../Interface/PropertySubPart";
 
 function Routing() {
   const [cart, setCart] = useState([]);
@@ -34,8 +35,8 @@ function Routing() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Navigate to="/interface" />} />{" "}
-        <Route path="/auth" element={<AuthForm />} />{" "}
+        <Route path="/" element={<Navigate to="/interface" />} />
+        <Route path="/auth" element={<AuthForm />} />
         <Route path="/homepage" element={<Navigate to="/interface" />} />
         <Route
           path="/interface"
@@ -54,6 +55,7 @@ function Routing() {
         <Route path="/buy-a-home" element={<BuyAhome />} />
         <Route path="/rent-a-home" element={<RentAhome />} />
         <Route path="/sell-a-home" element={<SellAhome />} />
+        <Route path="/view" element={<PropertySubPart />} />
         <Route
           path="/contact-us"
           element={
