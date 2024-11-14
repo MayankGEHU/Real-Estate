@@ -1,5 +1,234 @@
-.mainpagecontainer{
-    background-color: aqua;
-    width: 100%;
-    height: 60vh;
+:root {
+    --orange-soda: hsl(9, 100%, 62%);
 }
+
+.main-page-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .main-section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .left-side-container {
+    flex: 1;
+  }
+  
+  .text-container-for-sell-home h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .right-side-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-image {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .info-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #e9f5ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  .info-item {
+    text-align: center;
+  }
+  
+  .info-item h2 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin: 0;
+  }
+  
+  .info-item p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+.sell-with-agent-page {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 2rem;
+}
+
+.main-container-for-sell-with-agent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container-for-sell-with-agent {
+    background-color: #ffffff;
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.text-container-for-sell-with-agent h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.text-container-for-sell-with-agent p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.buttoncontainer-for-sell-with-agent button {
+    background-color: var(--orange-soda);
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+.lowertextcontainer-for-sell-with-agent {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.lowertextcontainer-for-sell-with-agent h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.lowertextcontainer-for-sell-with-agent ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.lowertextcontainer-for-sell-with-agent li {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.lowertextcontainer-for-sell-with-agent li::before {
+  content: "✔"; /* Checkmark symbol */
+  color: var(--orange-soda);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.right-container-for-sell-with-agent {
+    background-color: #ffffff;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.right-container-for-sell-with-agent img {
+    width: 80%;
+    max-width: 300px;
+}
+
+
+.sell-with-yourself-page {
+    padding: 2rem;
+    background-color: #f5f9fc;
+  }
+  
+  .main-container-for-sell-with-yourself {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .left-container-for-sell-with-yourself {
+    flex: 1;
+    padding-right: 1rem;
+  }
+  
+  .text-container-for-sell-with-yourself h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  .text-container-for-sell-with-yourself p {
+    color: #333;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+  
+  .buttoncontainer-for-sell-with-yourself {
+    margin-top: 1.5rem;
+  }
+  
+  .buttoncontainer-for-sell-with-yourself button {
+    background-color: var(--orange-soda);
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .lowertextcontainer-for-sell-with-yourself {
+    margin-top: 2rem;
+  }
+  
+  .lowertextcontainer-for-sell-with-yourself h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  .lowertextcontainer-for-sell-with-yourself ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .lowertextcontainer-for-sell-with-yourself ul li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .lowertextcontainer-for-sell-with-yourself ul li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: var(--orange-soda);
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .right-container-for-sell-with-yourself {
+    flex: 1;
+    /* Add any necessary styling for the image or elements on the right side */
+  }
