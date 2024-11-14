@@ -23,6 +23,7 @@ const PropertySection = ({ onAddToCart }) => {
 
   const properties = [
     {
+      id: 1,
       imgSrc: prop1,
       badge: "For Rent",
       badgeClass: "green",
@@ -42,6 +43,7 @@ const PropertySection = ({ onAddToCart }) => {
       authorTitle: "Estate Agents",
     },
     {
+      id: 2,
       imgSrc: prop2,
       badge: "For Sale",
       badgeClass: "orange",
@@ -61,6 +63,7 @@ const PropertySection = ({ onAddToCart }) => {
       authorTitle: "Estate Agents",
     },
     {
+      id: 3,
       imgSrc: prop3,
       badge: "For Rent",
       badgeClass: "green",
@@ -80,6 +83,7 @@ const PropertySection = ({ onAddToCart }) => {
       authorTitle: "Estate Agents",
     },
     {
+      id: 4,
       imgSrc: prop4,
       badge: "For Rent",
       badgeClass: "green",
@@ -111,11 +115,11 @@ const PropertySection = ({ onAddToCart }) => {
         <p className="section-subtitle">Properties</p>
         <h2 className="h2 section-title">Featured Listings</h2>
         <ul className="property-list has-scrollbar">
-          {properties.map((property, index) => (
-            <li key={index}>
+          {properties.map((property) => (
+            <li key={property.id}>
               <div className="property-card">
                 <figure className="card-banner">
-                  <Link to={`/property/${property.id}`}> 
+                  <Link to={`/view?id=${property.id}`}> {/* Updated link */}
                     <img
                       src={property.imgSrc}
                       alt={property.title}
@@ -146,26 +150,9 @@ const PropertySection = ({ onAddToCart }) => {
                     {property.pricePeriod}
                   </div>
                   <h3 className="h3 card-title">
-                    <Link to={`/property/${property.id}`}>{property.title}</Link> 
+                    <Link to={`/view?id=${property.id}`}>{property.title}</Link> {/* Updated link */}
                   </h3>
                   <p className="card-text">{property.description}</p>
-                  <ul className="card-list">
-                    <li className="card-item">
-                      <strong>{property.bedrooms}</strong>
-                      <BedOutline color={"#5d737e"} />
-                      <span>Bedrooms</span>
-                    </li>
-                    <li className="card-item">
-                      <strong>{property.bathrooms}</strong>
-                      <ManOutline color={"#5d737e"} />
-                      <span>Bathrooms</span>
-                    </li>
-                    <li className="card-item">
-                      <strong>{property.squareFt}</strong>
-                      <SquareOutline color={"#5d737e"} />
-                      <span>Square Ft</span>
-                    </li>
-                  </ul>
                 </div>
                 <div className="card-footer">
                   <div className="card-author">

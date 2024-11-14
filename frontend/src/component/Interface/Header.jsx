@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Interface/style.css";
 import {
   MailOutline,
@@ -10,12 +10,22 @@ import {
 } from "react-ionicons";
 import { Link, useNavigate } from "react-router-dom";
 import { LogInOutline } from "react-ionicons";
+import SearchBar from "./SearchBar"; 
 
 const Header = () => {
   const navigate = useNavigate();
+  const [isSearchPopupVisible, setIsSearchPopupVisible] = useState(false); 
 
   const handleLoginSignupClick = () => {
     navigate("/auth");
+  };
+
+  const toggleSearchPopup = () => {
+    setIsSearchPopupVisible(!isSearchPopupVisible);
+  };
+
+  const closeSearchPopup = () => {
+    setIsSearchPopupVisible(false); 
   };
 
   return (
@@ -63,14 +73,8 @@ const Header = () => {
 
       <div className="header-bottom">
         <div className="container">
-          {/* <a href="#" className="logo">
-            <img src={logo} alt="Homeverse logo" />
-          </a> */}
           <nav className="navbar" data-navbar>
             <div className="navbar-top">
-              {/* <a href="#" className="logo">
-                <img src={logo} alt="Homeverse logo" />
-              </a> */}
               <button
                 className="nav-close-btn"
                 data-nav-close-btn
@@ -116,24 +120,44 @@ const Header = () => {
           </nav>
 
           <div className="header-bottom-actions">
-            <button className="header-bottom-actions-btn" aria-label="Search">
+            <button
+              className="header-bottom-actions-btn"
+              aria-label="Search"
+              onClick={toggleSearchPopup} 
+            >
               <SearchOutline color={"#ff5a3d"} />
               <span>Search</span>
             </button>
+
+            {isSearchPopupVisible && (
+              <div className="search-popup">
+                <button
+                  className="search-popup-close-btn"
+                  aria-label="Close Search"
+                  onClick={closeSearchPopup}
+                >
+                  <CloseOutline color={"#ff5a3d"} />
+                </button>
+                <SearchBar />
+              </div>
+            )}
+
             <button
               className="header-bottom-actions-btn"
               aria-label="Profile"
-              onClick={handleLoginSignupClick} // Add onClick handler
+              onClick={handleLoginSignupClick}
             >
               <LogInOutline color={"#ff5a3d"} />
               <span>Login / Signup</span>
             </button>
+
             <button className="header-bottom-actions-btn" aria-label="Cart">
               <Link to={"/Cart"}>
                 <CartOutline color={"#ff5a3d"} />
               </Link>
               <span>Cart</span>
             </button>
+
             <button
               className="header-bottom-actions-btn"
               data-nav-open-btn
