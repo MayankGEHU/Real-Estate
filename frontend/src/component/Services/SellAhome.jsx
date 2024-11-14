@@ -11,6 +11,10 @@ function SellAhome() {
     navigate('/sell-by-agent');
   };
 
+  const handlePostYourHomeClick = () => {
+    navigate('/sell_by_yourself');
+  };
+
   return (
     <div>
       <div className="main-section-container">
@@ -87,7 +91,7 @@ function SellAhome() {
               </p>
             </div>
             <div className="buttoncontainer-for-sell-with-yourself">
-              <button>Post your home for sale</button>
+              <button onClick={handlePostYourHomeClick}>Post your home for sale</button>
             </div>
             <div className="lowertextcontainer-for-sell-with-yourself">
               <h2>Why sell FSBO</h2>

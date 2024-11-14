@@ -52,7 +52,7 @@
   }
   
   .tab.active {
-    background-color: #007aff;
+    background-color: #ff5a3d;
     color: white;
   }
   
@@ -70,7 +70,7 @@
   }
   
   .search-button {
-    background-color: #007aff;
+    background-color: #ff5a3d;
     color: black;
     padding: 10px;
     border: none;
@@ -90,6 +90,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    margin-top: 40px;
   }
   
   .agent-card {

@@ -1,4 +1,3 @@
-// src/Routing.js
 import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import AuthForm from '../auth/Login';
@@ -22,6 +21,7 @@ import EnquiryForm from '../enquiryForm/enquiryForm';
 import EnquiryHeader from '../enquiryForm/enquiryHeader';
 import Cart from '../cart/Cart';
 import PropertySubPart from '../Interface/PropertySubPart';
+import Sellbyyourself from '../Services/sell-by-yourself';
 
 function Routing() {
   const [cart, setCart] = useState([]);
@@ -57,7 +57,8 @@ function Routing() {
         <Route path="/buy-a-home" element={<BuyAhome />} />
         <Route path="/rent-a-home" element={<RentAhome />} />
         <Route path="/sell-a-home" element={<SellAhome />} />
-        <Route path="/sell-by-agent" element={<SellByAgent />} /> {/* New route */}
+        <Route path="/sell-by-agent" element={<SellByAgent />} /> 
+        <Route path='/sell_by_yourself' element = {<Sellbyyourself />} />
         <Route path="/view" element={<PropertySubPart />} />
         <Route
           path="/contact-us"
