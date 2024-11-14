@@ -1,9 +1,16 @@
-import React from "react";
-import "../Services/SellAhome.css";
-import homeimage from "../../assets/home-image.jpg";
-import sellwithAgent from "../../assets/sell-with-agent.png";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../Services/SellAhome.css';
+import homeimage from '../../assets/home-image.jpg';
+import sellwithAgent from '../../assets/sell-with-agent.png';
 
 function SellAhome() {
+  const navigate = useNavigate();
+
+  const handleFindAgentClick = () => {
+    navigate('/sell-by-agent');
+  };
+
   return (
     <div>
       <div className="main-section-container">
@@ -40,13 +47,17 @@ function SellAhome() {
         <div className="main-container-for-sell-with-agent">
           <div className="left-container-for-sell-with-agent">
             <div className="text-container-for-sell-with-agent">
-              <h1>Sell traditionally with an agent.</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat maiores adipisci culpa assumenda amet voluptatem alias ducimus, in neque architecto!</p>
+              <h1>Sell traditionally with an agent</h1>
+              <p>
+                Not in a market with Zillow's new selling experience? Work with
+                a real estate agent for selling support at every step, including
+                prepping, listing, and marketing your home.
+              </p>
             </div>
-            <div className="buttoncontainer-for-sell-with-agent">
-              <button>Find an Agent</button>
+            <div className="button-container-for-sell-with-agent">
+              <button onClick={handleFindAgentClick}>Find an agent</button>
             </div>
-            <div className="lowertextcontainer-for-sell-with-agent">
+            <div className="lower-text-container-for-sell-with-agent">
               <h2>Why sell traditionally</h2>
               <ul>
                 <li>Potential for bidding wars</li>
@@ -57,7 +68,7 @@ function SellAhome() {
             </div>
           </div>
           <div className="right-container-for-sell-with-agent">
-              <img src={sellwithAgent} alt="Sell with Agent" />
+            <img src={sellwithAgent} alt="Sell with Agent" />
           </div>
         </div>
       </div>
@@ -67,7 +78,13 @@ function SellAhome() {
           <div className="left-container-for-sell-with-yourself">
             <div className="text-container-for-sell-with-yourself">
               <h1>Sell your home yourself</h1>
-              <p>Deciding to sell your home yourself is referred to as for-sale-by-owner (FSBO). The FSBO process is similar to traditional selling, but without the help of a real estate agent. In this case, you’re responsible for the home prep, marketing, showings, and negotiations.</p>
+              <p>
+                Deciding to sell your home yourself is referred to as
+                for-sale-by-owner (FSBO). The FSBO process is similar to
+                traditional selling, but without the help of a real estate
+                agent. In this case, you’re responsible for the home prep,
+                marketing, showings, and negotiations.
+              </p>
             </div>
             <div className="buttoncontainer-for-sell-with-yourself">
               <button>Post your home for sale</button>
@@ -81,8 +98,7 @@ function SellAhome() {
               </ul>
             </div>
           </div>
-          <div className="right-container-for-sell-with-yourself">
-          </div>
+          <div className="right-container-for-sell-with-yourself"></div>
         </div>
       </div>
     </div>

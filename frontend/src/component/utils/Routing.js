@@ -1,25 +1,27 @@
-import React, { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import AuthForm from "../auth/Login";
-import Layout from "./Layout"; 
-import HeroSection from "../Interface/Hero";
-import AboutSection from "../Interface/About";
-import ServiceSection from "../Interface/Service";
-import PropertySection from "../Interface/Property";
-import FeaturesSection from "../Interface/Feature";
-import BlogSection from "../Interface/Blog";
-import CtaSection from "../Interface/Cta";
-import BuyAhome from "../Services/BuyAhome";
-import RentAhome from "../Services/RentAhome";
-import SellAhome from "../Services/SellAhome";
-import ContactForm from "../contectUs/ContactForm";
-import ContactHeader from "../contectUs/ContactHeader";
-import Button from "../contectUs/Button";
-import Button1 from "../enquiryForm/Button-enquiry";
-import EnquiryForm from "../enquiryForm/enquiryForm";
-import EnquiryHeader from "../enquiryForm/enquiryHeader";
-import Cart from "../cart/Cart";
-import PropertySubPart from "../Interface/PropertySubPart";
+// src/Routing.js
+import React, { useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import AuthForm from '../auth/Login';
+import Layout from './Layout';
+import HeroSection from '../Interface/Hero';
+import AboutSection from '../Interface/About';
+import ServiceSection from '../Interface/Service';
+import PropertySection from '../Interface/Property';
+import FeaturesSection from '../Interface/Feature';
+import BlogSection from '../Interface/Blog';
+import CtaSection from '../Interface/Cta';
+import BuyAhome from '../Services/BuyAhome';
+import RentAhome from '../Services/RentAhome';
+import SellAhome from '../Services/SellAhome';
+import SellByAgent from '../Services/sell-by-agent'
+import ContactForm from '../contectUs/ContactForm';
+import ContactHeader from '../contectUs/ContactHeader';
+import Button from '../contectUs/Button';
+import Button1 from '../enquiryForm/Button-enquiry';
+import EnquiryForm from '../enquiryForm/enquiryForm';
+import EnquiryHeader from '../enquiryForm/enquiryHeader';
+import Cart from '../cart/Cart';
+import PropertySubPart from '../Interface/PropertySubPart';
 
 function Routing() {
   const [cart, setCart] = useState([]);
@@ -55,6 +57,7 @@ function Routing() {
         <Route path="/buy-a-home" element={<BuyAhome />} />
         <Route path="/rent-a-home" element={<RentAhome />} />
         <Route path="/sell-a-home" element={<SellAhome />} />
+        <Route path="/sell-by-agent" element={<SellByAgent />} /> {/* New route */}
         <Route path="/view" element={<PropertySubPart />} />
         <Route
           path="/contact-us"

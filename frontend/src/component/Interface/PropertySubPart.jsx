@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-// import "./ProductGallery.css";
 import "../Interface/PropertySubPart.css"
 
-// Import product images - replace these with your actual image paths
+
 import product1 from "../../assets/property-1.jpg";
 import product2 from "../../assets/property-2.jpg";
 import product3 from "../../assets/property-3.jpg";
@@ -23,18 +22,14 @@ const PropertySubPart = () => {
   return (
     <div className="product-gallery">
       <div className="gallery-content">
-        {/* Main Image Display */}
         <div className="main-image">
           <img src={selectedImage} alt="Selected product" />
         </div>
-
-        {/* Description */}
         <div className="description">
           <p>{selectedDescription}</p>
         </div>
       </div>
 
-      {/* Thumbnails */}
       <div className="thumbnail-container">
         {productImages.map((image, index) => (
           <img

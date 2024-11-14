@@ -1,0 +1,146 @@
+.sell-by-agent-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .background-image {
+    /* background-image: url('/path/to/your/image.png'); */
+    background-color: #f5f9fc;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .overlay-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 70%;
+    max-width: 600px;
+  }
+  
+  .search-bar p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .search-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #007aff;
+    color: white;
+  }
+  
+  .search-input {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .search-button {
+    background-color: #007aff;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  
+  .agent-listing-page {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .agent-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .agent-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .agent-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .agent-image {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .badge {
+    background-color: #ff5a3d;
+    color: black;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+  }
+  
+  .agent-details h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .price-range, .sales {
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .reviews {
+    color: #007aff;
+    margin-left: 5px;
+  }
+  

@@ -16,7 +16,6 @@
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
   }
   
@@ -66,82 +65,83 @@
     color: #666;
   }
   
-.sell-with-agent-page {
+  .sell-with-agent-page {
     background-color: #ffffff;
     width: 100%;
     padding: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .main-container-for-sell-with-agent {
     display: flex;
     justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .left-container-for-sell-with-agent {
-    background-color: #ffffff;
     width: 50%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 .text-container-for-sell-with-agent h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .text-container-for-sell-with-agent p {
     font-size: 1rem;
-    margin-top: 1rem;
     color: #333;
+    margin-bottom: 1.5rem;
 }
 
-.buttoncontainer-for-sell-with-agent button {
-    background-color: var(--orange-soda);
+.button-container-for-sell-with-agent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.button-container-for-sell-with-agent button {
+    background-color:var(--orange-soda);
     color: #ffffff;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 1rem;
 }
 
-
-.lowertextcontainer-for-sell-with-agent {
-    margin-top: 2rem;
-    text-align: left;
-}
-
-.lowertextcontainer-for-sell-with-agent h2 {
+.lower-text-container-for-sell-with-agent h2 {
     font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.lowertextcontainer-for-sell-with-agent ul {
+.lower-text-container-for-sell-with-agent ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 0.5rem;
 }
 
-.lowertextcontainer-for-sell-with-agent li {
+.lower-text-container-for-sell-with-agent li {
     font-size: 1rem;
     margin-top: 0.5rem;
     display: flex;
     align-items: center;
 }
 
-.lowertextcontainer-for-sell-with-agent li::before {
-  content: "✔"; /* Checkmark symbol */
-  color: var(--orange-soda);
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
+.lower-text-container-for-sell-with-agent li::before {
+    content: "✔"; 
+    color: var(--orange-soda);
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .right-container-for-sell-with-agent {
-    background-color: #ffffff;
     width: 50%;
     display: flex;
     align-items: center;
@@ -150,9 +150,10 @@
 }
 
 .right-container-for-sell-with-agent img {
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 600px;
 }
+
 
 
 .sell-with-yourself-page {
@@ -222,7 +223,7 @@
   }
   
   .lowertextcontainer-for-sell-with-yourself ul li::before {
-    content: "✔"; /* Checkmark symbol */
+    content: "✔"; 
     color: var(--orange-soda);
     margin-right: 0.5rem;
     font-size: 1.2rem;
@@ -230,5 +231,4 @@
   
   .right-container-for-sell-with-yourself {
     flex: 1;
-    /* Add any necessary styling for the image or elements on the right side */
   }
