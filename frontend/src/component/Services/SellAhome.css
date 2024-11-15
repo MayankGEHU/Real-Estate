@@ -56,7 +56,7 @@
   
   .info-item h2 {
     font-size: 1.5rem;
-    color: #007BFF;
+    color: var(--orange-soda);
     margin: 0;
   }
   
