@@ -102,6 +102,26 @@ const PropertySection = ({ onAddToCart }) => {
       authorName: "Mayank Singh",
       authorTitle: "Estate Agents",
     },
+    {
+      id: 4,
+      imgSrc: prop4,
+      badge: "For Rent",
+      badgeClass: "green",
+      location: "Belmont Gardens, Chicago",
+      cameraCount: 4,
+      videoCount: 2,
+      price: "$34,900",
+      pricePeriod: "/Month",
+      title: "Luxury villa in Rego Park",
+      description:
+        "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
+      bedrooms: 3,
+      bathrooms: 2,
+      squareFt: 3450,
+      authorImg: authImag,
+      authorName: "Mayank Singh",
+      authorTitle: "Estate Agents",
+    },
   ];
 
   const handleAddToCart = (property) => {

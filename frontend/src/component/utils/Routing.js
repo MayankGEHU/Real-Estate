@@ -22,8 +22,6 @@ import EnquiryHeader from '../enquiryForm/enquiryHeader';
 import Cart from '../cart/Cart';
 import PropertySubPart from '../Interface/PropertySubPart';
 import Sellbyyourself from '../Services/sell-by-yourself';
-import SearchBar from '../Interface/SearchBar';
-
 function Routing() {
   const [cart, setCart] = useState([]);
 
