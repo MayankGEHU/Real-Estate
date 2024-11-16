@@ -12,7 +12,8 @@ import CtaSection from '../Interface/Cta';
 import BuyAhome from '../Services/BuyAhome';
 import RentAhome from '../Services/RentAhome';
 import SellAhome from '../Services/SellAhome';
-import SellByAgent from '../Services/sell-by-agent'
+import SellByAgent from '../Services/sell-by-agent';
+import Sellbyyourself from '../Services/sell-by-yourself';
 import ContactForm from '../contectUs/ContactForm';
 import ContactHeader from '../contectUs/ContactHeader';
 import Button from '../contectUs/Button';
@@ -21,7 +22,8 @@ import EnquiryForm from '../enquiryForm/enquiryForm';
 import EnquiryHeader from '../enquiryForm/enquiryHeader';
 import Cart from '../cart/Cart';
 import PropertySubPart from '../Interface/PropertySubPart';
-import Sellbyyourself from '../Services/sell-by-yourself';
+import Profile from '../Interface/Profile';
+
 function Routing() {
   const [cart, setCart] = useState([]);
 
@@ -57,7 +59,7 @@ function Routing() {
         <Route path="/rent-a-home" element={<RentAhome />} />
         <Route path="/sell-a-home" element={<SellAhome />} />
         <Route path="/sell-by-agent" element={<SellByAgent />} /> 
-        <Route path='/sell_by_yourself' element = {<Sellbyyourself />} />
+        <Route path='/sell_by_yourself' element={<Sellbyyourself />} />
         <Route path="/view" element={<PropertySubPart />} />
         <Route
           path="/contact-us"
@@ -83,6 +85,7 @@ function Routing() {
           path="/Cart"
           element={<Cart cart={cart} onRemoveFromCart={handleRemoveFromCart} />}
         />
+        <Route path='/Profile' element={<Profile />} />
       </Routes>
     </Layout>
   );

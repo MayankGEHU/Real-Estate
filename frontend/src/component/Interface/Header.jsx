@@ -7,9 +7,10 @@ import {
   CartOutline,
   MenuOutline,
   CloseOutline,
+  PersonCircleOutline,
+  LogInOutline,
 } from "react-ionicons";
 import { Link, useNavigate } from "react-router-dom";
-import { LogInOutline } from "react-ionicons";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -26,14 +27,14 @@ const Header = () => {
           <ul className="header-top-list">
             <li>
               <a href="mailto:minku6195@gmail.com" className="header-top-link">
-                <MailOutline color={"#ff5a3d"} />
+                <MailOutline color="#ff5a3d" />
                 <span>info@mayank.com</span>
               </a>
             </li>
             <li>
               <a href="#" className="header-top-link">
-                <LocationOutline color={"#ff5a3d"} />
-                <address>Rispna, Dehradun, Uttrakhand</address>
+                <LocationOutline color="#ff5a3d" />
+                <address>Rispna, Dehradun, Uttarakhand</address>
               </a>
             </li>
           </ul>
@@ -63,20 +64,14 @@ const Header = () => {
 
       <div className="header-bottom">
         <div className="container">
-          {/* <a href="#" className="logo">
-            <img src={logo} alt="Homeverse logo" />
-          </a> */}
           <nav className="navbar" data-navbar>
             <div className="navbar-top">
-              {/* <a href="#" className="logo">
-                <img src={logo} alt="Homeverse logo" />
-              </a> */}
               <button
                 className="nav-close-btn"
                 data-nav-close-btn
                 aria-label="Close Menu"
               >
-                <CloseOutline color={"#ff5a3d"} />
+                <CloseOutline color="#ff5a3d" />
               </button>
             </div>
             <div className="navbar-bottom">
@@ -116,21 +111,27 @@ const Header = () => {
           </nav>
 
           <div className="header-bottom-actions">
+            <Link to="/Profile" className="header-bottom-actions-btn" aria-label="User">
+              <PersonCircleOutline color="#ff5a3d" />
+              <span>Profile</span>
+            </Link>
             <button className="header-bottom-actions-btn" aria-label="Search">
-              <SearchOutline color={"#ff5a3d"} />
+              <Link to="/Profile">
+                <SearchOutline color="#ff5a3d" />
+              </Link>
               <span>Search</span>
             </button>
             <button
               className="header-bottom-actions-btn"
-              aria-label="Profile"
-              onClick={handleLoginSignupClick} // Add onClick handler
+              aria-label="Login/Signup"
+              onClick={handleLoginSignupClick}
             >
-              <LogInOutline color={"#ff5a3d"} />
+              <LogInOutline color="#ff5a3d" />
               <span>Login / Signup</span>
             </button>
             <button className="header-bottom-actions-btn" aria-label="Cart">
-              <Link to={"/Cart"}>
-                <CartOutline color={"#ff5a3d"} />
+              <Link to="/Cart">
+                <CartOutline color="#ff5a3d" />
               </Link>
               <span>Cart</span>
             </button>
@@ -139,7 +140,7 @@ const Header = () => {
               data-nav-open-btn
               aria-label="Open Menu"
             >
-              <MenuOutline color={"#ff5a3d"} />
+              <MenuOutline color="#ff5a3d" />
               <span>Menu</span>
             </button>
           </div>
