@@ -60,7 +60,7 @@ function SellAhome() {
               </p>
             </div>
             <div className="button-container-for-sell-with-agent">
-              <button onClick={handleFindAgentClick}>Find an agent</button>
+              <button onClick={handleFindAgentClick} >Find an agent</button>
             </div>
             <div className="lower-text-container-for-sell-with-agent">
               <h2>Why sell traditionally</h2>

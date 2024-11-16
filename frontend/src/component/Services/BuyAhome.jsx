@@ -19,12 +19,12 @@ const PropertySection = () => {
   const properties = [
     {
       imgSrc: prop1,
-      badge: "For Rent",
-      badgeClass: "green",
-      location: "Belmont Gardens, Chicago",
+      badge: "For Sale",
+      badgeClass: "orange",
+      location: "Dehradun, Uttarakhand",
       cameraCount: 4,
       videoCount: 2,
-      price: "$34,900",
+      price: "20,000",
       pricePeriod: "/Month",
       title: "New Apartment Nice View",
       description:
@@ -38,12 +38,12 @@ const PropertySection = () => {
     },
     {
       imgSrc: prop2,
-      badge: "For Rent",
-      badgeClass: "green",
-      location: "Belmont Gardens, Chicago",
+      badge: "For Sale",
+      badgeClass: "orange",
+      location: "Dehradun, Uttarakhand",
       cameraCount: 4,
       videoCount: 2,
-      price: "$34,900",
+      price: "20,000",
       pricePeriod: "/Month",
       title: "Modern Apartments",
       description:
@@ -57,12 +57,12 @@ const PropertySection = () => {
     },
     {
       imgSrc: prop3,
-      badge: "For Rent",
-      badgeClass: "green",
-      location: "Belmont Gardens, Chicago",
+      badge: "For Sale",
+      badgeClass: "orange",
+      location: "Dehradun, Uttarakhand",
       cameraCount: 4,
       videoCount: 2,
-      price: "$34,900",
+      price: "20,000",
       pricePeriod: "/Month",
       title: "Comfortable Apartment",
       description:
@@ -76,12 +76,12 @@ const PropertySection = () => {
     },
     {
       imgSrc: prop4,
-      badge: "For Rent",
-      badgeClass: "green",
-      location: "Belmont Gardens, Chicago",
+      badge: "For Sale",
+      badgeClass: "orange",
+      location: "Dehradun, Uttarakhand",
       cameraCount: 4,
       videoCount: 2,
-      price: "$34,900",
+      price: "20,000",
       pricePeriod: "/Month",
       title: "Luxury villa in Rego Park",
       description:
@@ -99,7 +99,7 @@ const PropertySection = () => {
     <section className="property" id="property">
       <div className="container">
         <p className="section-subtitle">Properties</p>
-        <h2 className="h2 section-title">Featured Listings</h2>
+        <h2 className="h2 section-title">For Buy</h2>
         <ul className="property-list has-scrollbar">
           {properties.map((property, index) => (
             <li key={index}>

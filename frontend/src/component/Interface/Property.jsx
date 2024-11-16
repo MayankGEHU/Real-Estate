@@ -9,6 +9,9 @@ import {
   LocationOutline,
   CameraOutline,
   FilmOutline,
+  BedOutline,
+  ManOutline,
+  SquareOutline,
   ResizeOutline,
   HeartOutline,
   AddCircleOutline,
@@ -89,7 +92,7 @@ const PropertySection = ({ onAddToCart }) => {
       videoCount: 2,
       price: "34,900",
       pricePeriod: "/Month",
-      title: "Luxury Apartment in Dehradun",
+      title: "Luxury villa in Rego Park",
       description:
         "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
       bedrooms: 3,
@@ -147,9 +150,27 @@ const PropertySection = ({ onAddToCart }) => {
                     {property.pricePeriod}
                   </div>
                   <h3 className="h3 card-title">
-                    <Link to={`/view?id=${property.id}`}>{property.title}</Link>
+                    <a href="#">{property.title}</a>
                   </h3>
                   <p className="card-text">{property.description}</p>
+                  <ul className="card-list">
+                    <li className="card-item">
+                      <strong>{property.bedrooms}</strong>
+                      <BedOutline color={"#5d737e"} />
+
+                      <span>Bedrooms</span>
+                    </li>
+                    <li className="card-item">
+                      <strong>{property.bathrooms}</strong>
+                      <ManOutline color={"#5d737e"} />
+                      <span>Bathrooms</span>
+                    </li>
+                    <li className="card-item">
+                      <strong>{property.squareFt}</strong>
+                      <SquareOutline color={"#5d737e"} />
+                      <span>Square Ft</span>
+                    </li>
+                  </ul>
                 </div>
                 <div className="card-footer">
                   <div className="card-author">

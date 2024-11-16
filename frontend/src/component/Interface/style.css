@@ -1131,23 +1131,14 @@
    */
   
   @media (min-width: 600px) {
+
   
-    /**
-     * CUSTOM PROPERTY
-     */
-  
-    :root {
-  
-      /**
-       * typography
-       */
-  
+    :root {  
       --fs-2: 1.875rem;
   
     }
   
-  
-  
+
     /**
      * REUSED STYLE
      */
