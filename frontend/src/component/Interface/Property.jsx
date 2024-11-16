@@ -9,9 +9,6 @@ import {
   LocationOutline,
   CameraOutline,
   FilmOutline,
-  BedOutline,
-  ManOutline,
-  SquareOutline,
   ResizeOutline,
   HeartOutline,
   AddCircleOutline,
@@ -87,12 +84,12 @@ const PropertySection = ({ onAddToCart }) => {
       imgSrc: prop4,
       badge: "For Rent",
       badgeClass: "green",
-      location: "Belmont Gardens, Chicago",
+      location: "Dehradun, Uttarakhand",
       cameraCount: 4,
       videoCount: 2,
-      price: "$34,900",
+      price: "34,900",
       pricePeriod: "/Month",
-      title: "Luxury villa in Rego Park",
+      title: "Luxury Apartment in Dehradun",
       description:
         "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood",
       bedrooms: 3,
@@ -119,7 +116,7 @@ const PropertySection = ({ onAddToCart }) => {
             <li key={property.id}>
               <div className="property-card">
                 <figure className="card-banner">
-                  <Link to={`/view?id=${property.id}`}> {/* Updated link */}
+                  <Link to={`/view?id=${property.id}`}> 
                     <img
                       src={property.imgSrc}
                       alt={property.title}
@@ -150,7 +147,7 @@ const PropertySection = ({ onAddToCart }) => {
                     {property.pricePeriod}
                   </div>
                   <h3 className="h3 card-title">
-                    <Link to={`/view?id=${property.id}`}>{property.title}</Link> {/* Updated link */}
+                    <Link to={`/view?id=${property.id}`}>{property.title}</Link>
                   </h3>
                   <p className="card-text">{property.description}</p>
                 </div>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../Services/SellAhome.css';
 import homeimage from '../../assets/home-image.jpg';
 import sellwithAgent from '../../assets/sell-with-agent.png';
+import sellbyyourself from '../../assets/sellyourself.jpg'
 
 function SellAhome() {
   const navigate = useNavigate();
@@ -102,7 +103,9 @@ function SellAhome() {
               </ul>
             </div>
           </div>
-          <div className="right-container-for-sell-with-yourself"></div>
+          <div className="right-container-for-sell-with-yourself">
+            <img src={sellbyyourself} alt="sell-with-yourself" />
+          </div>
         </div>
       </div>
     </div>

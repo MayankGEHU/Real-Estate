@@ -4,8 +4,8 @@
   }
   
   .background-image {
-    /* background-image: url('/path/to/your/image.png'); */
-    background-color: #f2f6f7;
+    background-image: url('../../assets/city-sunset.jpg');
+    /* background-color: #f2f6f7; */
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -18,7 +18,8 @@
   .overlay-text h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    color:  white;
   }
   
   .search-bar {
