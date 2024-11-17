@@ -2,6 +2,13 @@ import React from 'react'
 import './Profile.css'
 import profile from '../../assets/author.jpg'
 
+const profileData = [
+  {
+    name: "Mayank Singh",
+    location: "Dehradun"
+  }
+];
+
 const Profile = () => {
   return (
     <div className="Profile-container-box">
@@ -12,8 +19,12 @@ const Profile = () => {
                 </div>
             </div>
             <div className="profile-right-side">
-                <h1>John Doe</h1>
-                <p>Frontend Developer</p>
+                {profileData.map((data, index) => (
+                  <div key={index}>
+                    <h1>{data.name}</h1>
+                    <p>{data.location}</p>
+                  </div>
+                ))}
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 80vh;
-    background-color: #f8f8f8;
+    background-color: #f2f6f7;
     padding: 20px;
 }
 
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px; /* Adjust based on screen size */
+    max-width: 1200px; 
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
 
 .profile-left-side {
     flex: 1;
-    background-color: antiquewhite;
+    background-color: #0b2c3c;
     display: flex;
     justify-content: center;
     align-items: center;
