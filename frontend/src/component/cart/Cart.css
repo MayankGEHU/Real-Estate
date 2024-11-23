@@ -1,5 +1,7 @@
 
-.property { padding-block: var(--section-padding); }
+.property {
+   padding-block: var(--section-padding); 
+  }
   
 .property-card {
   border: 1px solid var(--alice-blue);
@@ -12,7 +14,9 @@
   overflow: hidden;
 }
 
-.property-card .card-banner a { height: 100%; }
+.property-card .card-banner a { 
+  height: 100%; 
+}
 
 .property-card .card-banner img {
   height: 100%;
@@ -20,7 +24,9 @@
   transition: 0.5s ease;
 }
 
-.property-card:hover .card-banner img { transform: scale(1.1); }
+.property-card:hover .card-banner img { 
+  transform: scale(1.1); 
+}
 
 .property-card .card-banner::before {
   content: "";
@@ -52,11 +58,17 @@
   gap: 4px;
 }
 
-.banner-actions-btn ion-icon { font-size: 16px; }
+.banner-actions-btn ion-icon { 
+  font-size: 16px; 
+}
 
-.banner-actions-btn:first-child { margin-right: auto; }
+.banner-actions-btn:first-child {
+   margin-right: auto; 
+  }
 
-.banner-actions-btn:is(:hover, :focus) { color: var(--orange-soda); }
+.banner-actions-btn:is(:hover, :focus) { 
+  color: var(--orange-soda);
+ }
 
 .property-card .card-content {
   padding: 30px 15px 15px;
@@ -80,7 +92,9 @@
   margin-bottom: 15px;
 }
 
-.property-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+.property-card .card-title > a:is(:hover, :focus) {
+   color: var(--orange-soda);
+   }
 
 .property-card .card-text {
   color: var(--cadet);
