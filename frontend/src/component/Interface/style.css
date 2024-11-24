@@ -134,7 +134,9 @@
     height: 8px;
   }
   
-  ::-webkit-scrollbar-track { background: var(--white); }
+  ::-webkit-scrollbar-track { 
+    background: var(--white); 
+  }
   
   ::-webkit-scrollbar-thumb {
     background: var(--cadet);
@@ -149,9 +151,13 @@
     #REUSED STYLE
   \*-----------------------------------*/
   
-  .container { padding-inline: 15px; }
+  .container {
+     padding-inline: 15px; 
+    }
   
-  button, a { transition: var(--transition); }
+  button, a {
+     transition: var(--transition); 
+    }
   
   .h1,
   .h2,
@@ -166,7 +172,9 @@
     line-height: 1;
   }
   
-  .h2 { font-size: var(--fs-2); }
+  .h2 {
+     font-size: var(--fs-2); 
+    }
   
   .h3 {
     font-size: var(--fs-4);
@@ -205,9 +213,13 @@
     z-index: -1;
   }
   
-  .btn:is(:hover, :focus)::before { width: 100%; }
+  .btn:is(:hover, :focus)::before {
+     width: 100%; 
+    }
   
-  .w-100 { width: 100%; }
+  .w-100 { 
+    width: 100%; 
+  }
   
   .section-subtitle {
     color: var(--orange-soda);
@@ -237,9 +249,13 @@
     padding: 4px 10px;
   }
   
-  .card-badge.green { background: var(--yellow-green); }
+  .card-badge.green {
+     background: var(--yellow-green); 
+    }
   
-  .card-badge.orange { background: var(--orange-soda); }
+  .card-badge.orange {
+     background: var(--orange-soda); 
+    }
   
   .has-scrollbar {
     display: flex;
