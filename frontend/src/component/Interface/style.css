@@ -87,15 +87,21 @@
     box-sizing: border-box;
   }
   
-  li { list-style: none; }
+  li { 
+    list-style: none; 
+  }
   
-  a { text-decoration: none; }
+  a { 
+    text-decoration: none; 
+  }
   
   a,
   img,
   span,
   button,
-  ion-icon { display: block; }
+  ion-icon {
+     display: block; 
+    }
   
   button {
     border: none;
@@ -105,9 +111,13 @@
     cursor: pointer;
   }
   
-  address { font-style: normal; }
+  address { 
+    font-style: normal; 
+  }
   
-  ion-icon { pointer-events: none; }
+  ion-icon { 
+    pointer-events: none; 
+  }
   
   html {
     font-family: var(--ff-nunito-sans);
