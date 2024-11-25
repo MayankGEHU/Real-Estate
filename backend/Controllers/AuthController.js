@@ -30,7 +30,7 @@ const signup = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  console.log("Login request received", req.body); // Log the request body
+  console.log("Login request received", req.body); 
   try {
     const { email, password } = req.body;
     const user = await UserModels.findOne({ email });
