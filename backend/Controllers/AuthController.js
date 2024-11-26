@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const signup = async (req, res) => {
-  console.log("Signup request received", req.body); // Log the request body
+  console.log("Signup request received", req.body);
   try {
     const { name, email, password } = req.body;
     const existingUser = await UserModels.findOne({ email });
