@@ -16,11 +16,9 @@ Real Este is a modern real estate website that helps users explore, search, and 
 - **Frontend**: HTML, CSS, JavaScript / React.js
 - **Backend**: Node.js, Express.js (if applicable)
 - **Database**: MongoDB / Firebase / MySQL (whichever you used)
-- **Others**: Tailwind CSS / Bootstrap, Map APIs (Google Maps, etc.)
 
 ## 📸 Screenshots
 
-> *Add screenshots here if available*
 
 ## 🧑‍💻 Getting Started
 
@@ -29,3 +27,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/your-username/real-este.git
 cd real-este
+
+Install Dependencies
+npm install
+
