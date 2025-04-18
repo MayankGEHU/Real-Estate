@@ -17,6 +17,35 @@ Real Este is a modern real estate website that helps users explore, search, and 
 - **Backend**: Node.js, Express.js (if applicable)
 - **Database**: MongoDB / Firebase / MySQL (whichever you used)
 
+🗃️ Folder Structure
+
+```base
+
+real-este/
+├── backend/
+│   ├── Controllers/       # Handles logic for routes
+│   ├── Middlewares/       # Custom middleware (auth, error handling, etc.)
+│   ├── Models/            # Database schemas/models
+│   ├── Routes/            # API endpoints
+│   ├── node_modules/      
+│   ├── .env               # Environment variables
+│   ├── index.js           # Entry point of backend server
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── public/            # Public assets and HTML file
+│   └── src/
+│       ├── assets/        # Images, icons, etc.
+│       ├── component/     # Reusable React components
+│       ├── App.js         # Main App component
+│       ├── App.test.js    # Test file (if applicable)
+│       ├── index.js       # React entry point
+│       └── reportWebVitals.js
+│
+└── README.md
+```
+
 ## 📸 Screenshots
 
 
@@ -25,11 +54,8 @@ Real Este is a modern real estate website that helps users explore, search, and 
 1. Clone the repository:
 
 ```bash
-[[git clone https://github.com/your-username/real-este.git](https://github.com/MayankGEHU/Real-Estate.git)
-cd real-este
 
-cd backend
-cd frontend
+https://github.com/MayankGEHU/Real-Estate.git
 ```
 
 2. Install Dependencies
@@ -43,3 +69,12 @@ npm install
 ```bash
 npm start
 ```
+
+🙌 Contributing
+Contributions are welcome!
+Feel free to fork the project and submit a pull request.
+Please open an issue first to discuss any major changes.
+
+🙋‍♂️ Author
+Made with ❤️ by Mayank Singh
+
