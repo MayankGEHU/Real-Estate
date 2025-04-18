@@ -23,30 +23,28 @@ Real Este is a modern real estate website that helps users explore, search, and 
 
 real-este/
 ├── backend/
-│   ├── Controllers/       # Handles logic for routes
-│   ├── Middlewares/       # Custom middleware (auth, error handling, etc.)
-│   ├── Models/            # Database schemas/models
-│   ├── Routes/            # API endpoints
+│   ├── Controllers/      
+│   ├── Middlewares/     
+│   ├── Models/            
+│   ├── Routes/           
 │   ├── node_modules/      
-│   ├── .env               # Environment variables
-│   ├── index.js           # Entry point of backend server
+│   ├── .env              
+│   ├── index.js          
 │   ├── package.json
 │   └── package-lock.json
 │
 ├── frontend/
-│   ├── public/            # Public assets and HTML file
+│   ├── public/            
 │   └── src/
-│       ├── assets/        # Images, icons, etc.
-│       ├── component/     # Reusable React components
-│       ├── App.js         # Main App component
-│       ├── App.test.js    # Test file (if applicable)
-│       ├── index.js       # React entry point
+│       ├── assets/      
+│       ├── component/     
+│       ├── App.js       
+│       ├── App.test.js    
+│       ├── index.js      
 │       └── reportWebVitals.js
 │
 └── README.md
 ```
-
-## 📸 Screenshots
 
 
 ## 🧑‍💻 Getting Started
