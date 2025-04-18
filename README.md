@@ -25,8 +25,11 @@ Real Este is a modern real estate website that helps users explore, search, and 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/real-este.git
+[[git clone https://github.com/your-username/real-este.git](https://github.com/MayankGEHU/Real-Estate.git)
 cd real-este
+
+cd backend
+cd frontend
 ```
 
 2. Install Dependencies
