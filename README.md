@@ -22,12 +22,21 @@ Real Este is a modern real estate website that helps users explore, search, and 
 
 ## 🧑‍💻 Getting Started
 
-Clone the repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/real-este.git
 cd real-este
+```
 
-Install Dependencies
+2. Install Dependencies
+
+```bash
 npm install
+```
 
+3. Run the Development Server
+   
+```bash
+npm start
+```
